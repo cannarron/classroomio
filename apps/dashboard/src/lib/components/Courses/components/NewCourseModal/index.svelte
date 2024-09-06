@@ -86,7 +86,7 @@
         description,
         type: type,
         version: COURSE_VERSION.V2,
-        group_id
+       // group_id
       })
       .select();
     console.log(`newCourse data`, newCourseData);

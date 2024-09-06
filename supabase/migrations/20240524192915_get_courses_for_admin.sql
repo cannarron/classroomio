@@ -20,10 +20,16 @@ or replace function public.get_courses (org_id_arg uuid, profile_id_arg uuid) re
 ) language plpgsql as $function$
 BEGIN
   Return query
-  select course.id, organization.id AS org_id, course.title, course.slug, course.description, course.logo, course.banner_image, course.cost, course.currency, course.is_published, (select COUNT(*) from lesson as l where l.course_id = course.id) AS total_lessons, (select COUNT(*) from groupmember as gm where gm.group_id = course.group_id AND gm.role_id = 3) as total_students, (select COUNT(*) from lesson_completion as lc join lesson as l on l.id = lc.lesson_id where l.course_id = course.id and lc.is_complete = true and lc.profile_id = profile_id_arg) AS progress_rate, course.type as type, (select groupmember.profile_id from groupmember where groupmember.group_id = "group".id and groupmember.profile_id =  profile_id_arg) as member_profile_id
+  select course.id, organization.id AS org_id, course.title, course.slug, course.description, course.logo, course.banner_image, course.cost, course.currency, course.is_published, 
+  (select COUNT(*) from lesson as l where l.course_id = course.id) AS total_lessons, 
+  (select COUNT(*) from groupmember as gm where gm.group_id = 
+  (
+    SELECT "group".id from "group" where "group".course_id = course.id and "group".is_active = true LIMIT 1
+  ) AND gm.role_id = 3) as total_students, (select COUNT(*) from lesson_completion as lc join lesson as l on l.id = lc.lesson_id where l.course_id = course.id and lc.is_complete = true and lc.profile_id = profile_id_arg) AS progress_rate, course.type as type, (select groupmember.profile_id from groupmember where groupmember.group_id = "group".id and groupmember.profile_id =  profile_id_arg) as member_profile_id
   from course
-  join "group" on "group".id = course.group_id
-  join organization on organization.id = "group".organization_id
+  join "group" on "group".course_id = course.id
+
+join organization on organization.id = "group".organization_id
   where course.status = 'ACTIVE' AND organization.id = org_id_arg
   -- GROUP BY course.id, groupmember.profile_id
   ORDER BY course.created_at DESC;
