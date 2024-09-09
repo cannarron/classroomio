@@ -66,35 +66,36 @@
     if (hasError) return;
 
     const { title, description } = $createCourseModal;
-    // 1. Create group
-    const { data: newGroup } = await supabase
-      .from('group')
-      .insert({ name: title, description, organization_id: $currentOrg.id })
-      .select();
-
-    console.log(`newGroup`, newGroup);
-
-    if (!newGroup) return;
-
-    const { id: group_id } = newGroup[0];
-
-    // 2. Create course with group_id
-    const { data: newCourseData } = await supabase
+      // 1. Create course first
+      const { data: newCourseData} =  await supabase
       .from('course')
       .insert({
         title,
         description,
         type: type,
-        version: COURSE_VERSION.V2,
-       // group_id
+        version: COURSE_VERSION.V2
       })
       .select();
-    console.log(`newCourse data`, newCourseData);
+      console.log(`newCourse data`, newCourseData);
+      if (!newCourseData) return;
+      const newCourse = newCourseData[0];
+      const { id:course_id } = newCourse;
 
-    if (!newCourseData) return;
+     // 2. Create the group with the course_id
+     const { data : newGroup} =  await supabase
+     .from('group')
+     .insert({
+      name: title,
+      description,
+      organization_id: $currentOrg.id,
+      course_id
+     })
+     .select();
+     console.log(`newGroup`, newGroup);
+     if (!newGroup) return;
+     const {id : group_id} = newGroup[0];
 
-    const newCourse = newCourseData[0];
-    courses.update((_courses) => [..._courses, newCourse]);
+courses.update((_courses) => [..._courses, newCourse]);
 
     capturePosthogEvent('course_created', {
       course_id: newCourse.id,
