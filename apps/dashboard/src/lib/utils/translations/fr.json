@@ -949,7 +949,8 @@
         "refresh": "Rafraîchir",
         "remove": "Retirer",
         "custom_favicon": "Icône de favori personnalisée",
-        "custom_code": "Code personnalisé"
+        "custom_code": "Code personnalisé",
+        "custom_domain_not_classroomio": "Le domaine ne peut pas contenir « classroomio »"
       },
       "customize-lms": {
         "title": "Personnaliser le LMS",
@@ -1218,6 +1219,11 @@
           "video": "Vidéo",
           "image": "Image"
         }
+      },
+      "background": {
+        "title": "Image d'arrière-plan",
+        "show_background": "Afficher l'arrière-plan",
+        "hide_background": "Masquer l'arrière-plan"
       }
     },
     "organization": {
@@ -1240,7 +1246,9 @@
         },
         "theme": {
           "heading": "Thème",
-          "sub_heading": "Définissez la couleur de votre marque"
+          "sub_heading": "Définissez la couleur de votre marque",
+          "custom_theme": "Thème personnalisé",
+          "add_theme": "Ajouter un thème"
         },
         "customize_lms": {
           "heading": "Personnaliser le LMS",
@@ -1307,7 +1315,9 @@
     "what_brings": "Qu'est-ce qui t'amène à",
     "how": "Comment avez-vous entendu parler de nous?",
     "back": "Dos",
-    "continue": "Continuer"
+    "continue": "Continuer",
+    "employees": "Former mes collaborateurs",
+    "customers": "Créer des cours pour mes clients"
   },
   "verify_email_modal": {
     "heading": "Vérifiez votre e-mail",
@@ -1325,6 +1335,17 @@
   },
   "specialization": {
     "course_tag": "Spécialisation"
+  },
+  "profileMenu": {
+    "profile": "PROFIL",
+    "current_org": "ORGANISATION ACTUELLE",
+    "free_tools": "OUTILS GRATUITS",
+    "progress": "Rapport d'étape",
+    "timer": "Minuterie d'activité",
+    "tic_tac": "Tic-tac",
+    "see_more": "Voir plus",
+    "whats_new": "Quoi de neuf",
+    "launch_week": "Semaine de lancement"
   },
   "validations": {
     "invalid_type_error": "Ne doit pas être vide",

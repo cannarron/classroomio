@@ -12,7 +12,7 @@
       <!-- Title -->
       <hgroup class="flex flex-col items-center justify-center text-center w-full">
         <p class="text-sm text-gray-500">{formatDate(data.meta.date)}</p>
-        <p class="font-bold text-3xl py-2 text-center md:w-[60%]">{data.meta.title}</p>
+        <p class="font-bold text-3xl py-2 text-center md:w-[60%]">{@html data.meta.title}</p>
       </hgroup>
       <main class="mx-auto max-w-screen-md px-4 lg:px-8">
         <div class="flex items-center justify-start gap-4 my-2 border-y border-gray-200 py-4">
@@ -50,7 +50,17 @@
     margin-inline: auto;
   }
 
-  h1 {
-    text-transform: capitalize;
+  :global(.prose a) {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  :global(.prose .gallery img) {
+    max-height: 300px;
+    border-radius: 0.375rem;
+  }
+
+  :global(.prose .gallery) {
+    overflow-x: scroll;
   }
 </style>

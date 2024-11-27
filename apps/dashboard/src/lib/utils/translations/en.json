@@ -21,6 +21,8 @@
     "sell": "Sell courses online",
     "teach": "Teach my current students online",
     "expanding": "On another platform, expanding here",
+    "employees": "Train my employees",
+    "customers": "Create courses for my customers",
     "explore": "Just here to explore",
     "articles": "Articles",
     "search": "Search engine",
@@ -37,7 +39,7 @@
 
   "welcome_modal": {
     "we_at": "We at",
-    "small_team": "are a small team with a large mission to empower educators with great technology to help them train the future generation. Education is the most powerful gift you can give anyone, and it makes so much sense to give you all the tools you need to give more people this GIFT.",
+    "small_team": "are a small team with a large mission to empower educators with great software to help them make an impact in people's lives. Education is the most powerful gift you can give anyone, and it makes perfect sense to provide you with all the tools you need to give this GIFT to more people.",
     "thank_you": "Thank you for choosing us",
     "deeply_appreciate": "we deeply appreciate it and are at your service."
   },
@@ -49,7 +51,18 @@
     "forgot": "Forgot password?",
     "login": "Log In"
   },
+  "profileMenu": {
+    "profile": "PROFILE",
+    "current_org": "CURRENT ORGANIZATION",
+    "free_tools": "FREE TOOLS",
+    "progress": "Progress report",
+    "timer": "Activity timer",
+    "tic_tac": "Tictac toe",
+    "see_more": "See more",
 
+    "whats_new": "What's new",
+    "launch_week": "Launch week"
+  },
   "settings": {
     "heading": "Settings",
     "subheadings": {
@@ -88,7 +101,9 @@
         "update_organization": "Update Organization",
         "theme": {
           "heading": "Theme",
-          "sub_heading": "Set your brand color"
+          "sub_heading": "Set your brand color",
+          "custom_theme": "Custom Theme",
+          "add_theme": "Add Theme"
         },
         "customize_lms": {
           "heading": "Customize LMS",
@@ -117,6 +132,11 @@
       "title": "Title",
       "title_highlight": "Title-Highlight",
       "subtitle": "Subtitle",
+      "background": {
+        "title": "Background Image",
+        "show_background": "Show background",
+        "hide_background": "Hide background"
+      },
       "actions": {
         "heading": "Actions",
         "label": "Label",
@@ -128,6 +148,7 @@
           "video": "Video",
           "image": "Image"
         },
+
         "show_banner": "Show banner",
         "hide_banner": "Hide banner"
       },
@@ -343,6 +364,7 @@
         "save": "Save",
         "your_domain": "Your Domain",
         "custom_domain_error": "You can't add a top level domain as custom domain. Instead, use a subdomain like 'courses.[yourwebsite].com' or 'www.[yourwebsite].com'.",
+        "custom_domain_not_classroomio": "Domain cannot contain 'classroomio'",
         "custom_domain_success": "Custom domain added successfully",
         "dns_description": "Set the following record on your DNS provider to continue:",
         "dns_type": "Type",

@@ -949,7 +949,8 @@
         "refresh": "Обновить",
         "remove": "Удалять",
         "custom_favicon": "Пользовательский значок",
-        "custom_code": "Пользовательский код"
+        "custom_code": "Пользовательский код",
+        "custom_domain_not_classroomio": "Домен не может содержать classio."
       },
       "customize-lms": {
         "title": "Настроить систему управления обучением",
@@ -1218,6 +1219,11 @@
           "video": "видео",
           "image": "Изображение"
         }
+      },
+      "background": {
+        "title": "Фоновое изображение",
+        "show_background": "Показать фон",
+        "hide_background": "Скрыть фон"
       }
     },
     "organization": {
@@ -1240,7 +1246,9 @@
         },
         "theme": {
           "heading": "Тема",
-          "sub_heading": "Установите цвет вашего бренда"
+          "sub_heading": "Установите цвет вашего бренда",
+          "custom_theme": "Пользовательская тема",
+          "add_theme": "Добавить тему"
         },
         "customize_lms": {
           "heading": "Настроить систему управления обучением",
@@ -1307,7 +1315,9 @@
     "what_brings": "Что привело вас к",
     "how": "Как вы узнали о нас?",
     "back": "Назад",
-    "continue": "Продолжать"
+    "continue": "Продолжать",
+    "employees": "Обучайте моих сотрудников",
+    "customers": "Создавайте курсы для моих клиентов"
   },
   "verify_email_modal": {
     "heading": "Подтвердите Ваш электронный адрес",
@@ -1325,6 +1335,17 @@
   },
   "specialization": {
     "course_tag": "Специализация"
+  },
+  "profileMenu": {
+    "profile": "ПРОФИЛЬ",
+    "current_org": "ТЕКУЩАЯ ОРГАНИЗАЦИЯ",
+    "free_tools": "БЕСПЛАТНЫЕ ИНСТРУМЕНТЫ",
+    "progress": "Отчет о ходе работы",
+    "timer": "Таймер активности",
+    "tic_tac": "Крестики-нолики",
+    "see_more": "Узнать больше",
+    "whats_new": "Что нового",
+    "launch_week": "Неделя запуска"
   },
   "validations": {
     "invalid_type_error": "Не должно быть пустым",

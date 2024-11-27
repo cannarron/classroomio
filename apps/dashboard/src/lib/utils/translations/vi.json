@@ -949,7 +949,8 @@
         "refresh": "Làm cho khỏe lại",
         "remove": "Di dời",
         "custom_favicon": "Biểu tượng yêu thích tùy chỉnh",
-        "custom_code": "Mã tùy chỉnh"
+        "custom_code": "Mã tùy chỉnh",
+        "custom_domain_not_classroomio": "Tên miền không thể chứa 'classroomio'"
       },
       "customize-lms": {
         "title": "Tùy chỉnh LMS",
@@ -1218,6 +1219,11 @@
           "video": "Băng hình",
           "image": "Hình ảnh"
         }
+      },
+      "background": {
+        "title": "Hình nền",
+        "show_background": "Hiển thị nền",
+        "hide_background": "Ẩn nền"
       }
     },
     "organization": {
@@ -1240,7 +1246,9 @@
         },
         "theme": {
           "heading": "chủ đề",
-          "sub_heading": "Đặt màu thương hiệu của bạn"
+          "sub_heading": "Đặt màu thương hiệu của bạn",
+          "custom_theme": "Chủ đề tùy chỉnh",
+          "add_theme": "Thêm chủ đề"
         },
         "customize_lms": {
           "heading": "Tùy chỉnh LMS",
@@ -1307,7 +1315,9 @@
     "what_brings": "Điều gì đưa bạn đến",
     "how": "Bạn đã nghe về chúng tôi như thế nào?",
     "back": "Mặt sau",
-    "continue": "Tiếp tục"
+    "continue": "Tiếp tục",
+    "employees": "Đào tạo nhân viên của tôi",
+    "customers": "Tạo khóa học cho khách hàng của tôi"
   },
   "verify_email_modal": {
     "heading": "Xác nhận email của bạn",
@@ -1325,6 +1335,17 @@
   },
   "specialization": {
     "course_tag": "Chuyên môn"
+  },
+  "profileMenu": {
+    "profile": "HỒ SƠ",
+    "current_org": "TỔ CHỨC HIỆN TẠI",
+    "free_tools": "CÔNG CỤ MIỄN PHÍ",
+    "progress": "Báo cáo tiến trình",
+    "timer": "Hẹn giờ hoạt động",
+    "tic_tac": "TIC Tac Toe",
+    "see_more": "Xem thêm",
+    "whats_new": "Có gì mới",
+    "launch_week": "Tuần ra mắt"
   },
   "validations": {
     "invalid_type_error": "Không được để trống",
